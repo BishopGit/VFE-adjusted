@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ModMetaData>
+    <name>VFE - Adjusted</name>
+    <author>Bishop</author>
+    <supportedVersions>
+        <li>1.0</li>
+    </supportedVersions>
+    <url>https://github.com/BishopGit/VFE-adjusted</url>
+    <description>Quality of life changes for the Vanilla Furniture Expanded series.</description>
+</ModMetaData>

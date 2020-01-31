@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Patch>
+    <Operation Class="PatchOperationFindMod">
+        <mods>
+            <li>Vanilla Furniture Expanded - Security</li>
+            <li>[RF] Fertile Fields [1.0]</li>
+        </mods>
+        <match Class="PatchOperationSequence">
+            <success>Always</success>
+
+            <operations>
+                <!-- Reduce cost in steel, add cloth and sand for sandbags -->
+                <li Class="PatchOperationReplace">
+                    <xpath>Defs/ThingDef[defName="VFES_Turret_HMGComplex"]/costList</xpath>
+                    <value>
+                        <costList>
+                            <Steel>100</Steel>
+                            <ComponentIndustrial>6</ComponentIndustrial>
+                            <Cloth>10</Cloth>
+                            <SandPile>5</SandPile>
+                        </costList>
+                    </value>
+                </li>
+               
+            </operations>
+        </match>
+    </Operation>
+
+    <Operation Class="PatchOperationFindMod">
+        <mods>
+            <li>Vanilla Furniture Expanded - Security</li>
+        </mods>
+        <match Class="PatchOperationSequence">
+            <success>Always</success>
+
+            <operations>
+                <!-- Change cost of BarbedWire from 10 'metal' to 8 steel + 2 wood -->
+                <li Class="PatchOperationAdd">
+                    <xpath>Defs/ThingDef[defName="VFES_BarbedWire"]</xpath>
+                    <value>
+                        <costList>
+                            <Steel>8</Steel>
+                            <WoodLog>2</WoodLog>
+                        </costList>
+                    </value>
+                </li>
+                <li Class="PatchOperationRemove">
+                    <xpath>Defs/ThingDef[defName="VFES_BarbedWire"]/costStuffCount</xpath>
+                </li>
+                <li Class="PatchOperationRemove">
+                    <xpath>Defs/ThingDef[defName="VFES_BarbedWire"]/stuffCategories</xpath>
+                </li>
+                
+            </operations>
+        </match>
+    </Operation>
+</Patch>

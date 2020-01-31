@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Patch>
+    <Operation Class="PatchOperationFindMod">
+        <mods>
+            <li>Vanilla Furniture Expanded</li>
+        </mods>
+        <match Class="PatchOperationSequence">
+            <success>Always</success>
+
+            <operations>
+                <!-- Increase shooting exp given from arcade (dartboard gives 0.03)-->
+                <li Class="PatchOperationReplace">
+                    <xpath>Defs/JobDef[defName="Play_Arcade"]/joyXpPerTick</xpath>
+                    <value>
+                        <joyXpPerTick>0.02</joyXpPerTick>
+                    </value>
+                </li>
+                
+            </operations>
+        </match>
+    </Operation>
+
+</Patch>

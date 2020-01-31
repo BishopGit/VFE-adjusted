@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Patch>
+    <Operation Class="PatchOperationFindMod">
+        <mods>
+            <li>Vanilla Furniture Expanded - Spacer Module</li>
+        </mods>
+        <match Class="PatchOperationSequence">
+            <success>Always</success>
+
+            <operations>
+                <!-- Allow reinforced walls to be constructed with stone stuff -->
+                <li Class="PatchOperationAdd">
+                    <xpath>Defs/ThingDef[defName="Reinforced_WallAT"]/stuffCategories</xpath>
+                    <value>
+                        <li>Stony</li>
+                    </value>
+                </li>
+                
+            </operations>
+        </match>
+    </Operation>
+
+</Patch>
